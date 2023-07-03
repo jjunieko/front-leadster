@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import TumbImage from "../../public/images/thumbnail.png";
 import imageUrl from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 interface CardData {
   id: number;
@@ -106,14 +108,12 @@ const CardComponent: React.FC = () => {
   return (
     <CardContainer>
       {currentItems.map((item) => (
-        <>
-          <Card key={item.id} onClick={() => openModal(item)}>
-            <ImageWrapper>
-              <Image src={item.imageUrl} width={80} height={80} alt="Card Image" />
-            </ImageWrapper>
-            <Text>{item.text}</Text>
-          </Card>
-        </>
+        <Card key={item.id} onClick={() => openModal(item)}>
+          <ImageWrapper>
+            <Image src={item.imageUrl} width={80} height={80} alt="Card Image" />
+          </ImageWrapper>
+          <Text>{item.text}</Text>
+        </Card>
       ))}
 
       {selectedCard && (
@@ -131,20 +131,30 @@ const CardComponent: React.FC = () => {
             </ModalVideo>
             <ModalDescription>
               <ModalDescriptionTextTitle>Descrição</ModalDescriptionTextTitle>
-              <Separator />
+              <SeparatorModal />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ipsum commodo, hendrerit nisi sed, gravida est.
                 Vivamus vitae felis odio.
               </p>
             </ModalDescription>
+
             <ModalDownload>
               <ModalDescriptionTextTitle>Download</ModalDescriptionTextTitle>
             </ModalDownload>
-              <Separator />
+            <SeparatorModal />
             <ModalDownloadButton>
-              <DownloadButton>SpreedSheet.txt</DownloadButton>
-              <DownloadButton>SpreedSheet.txt</DownloadButton>
-              <DownloadButtonOrange>SpreedSheet.txt</DownloadButtonOrange>
+              <DownloadButton>
+                <FontAwesomeIcon icon={faDownload} />
+                <span>SpreedSheet.txt</span>
+              </DownloadButton>
+              <DownloadButton>
+                <FontAwesomeIcon icon={faDownload} />
+                <span>SpreedSheet.txt</span>
+              </DownloadButton>
+              <DownloadButtonOrange>
+                <FontAwesomeIcon icon={faDownload} />
+                <span>SpreedSheet.txt</span>
+              </DownloadButtonOrange>
             </ModalDownloadButton>
           </ModalContent>
         </ModalContainer>
@@ -175,10 +185,8 @@ export default CardComponent;
 const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: -10px;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 `;
 
 const Card = styled.div`
@@ -193,12 +201,14 @@ const Card = styled.div`
   &:hover {
     background-color: #f0f0f2;
   }
-`;
 
-const CardRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  @media (max-width: 768px) {
+    width: calc(50% - 20px);
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -264,8 +274,22 @@ const Separator = styled.div`
   margin: 20px 0;
   margin-left: 20px;
   margin-right: 20px;
+
+  @media (max-width: 768px) {
+    margin: 10px 0;
+  }
 `;
 
+const SeparatorModal = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 5px 0;
+
+  @media (max-width: 768px) {
+    margin: 10px 0;
+  }
+`;
 
 const ModalContainer = styled.div`
   position: fixed;
@@ -286,6 +310,11 @@ const ModalContent = styled.div`
   background-color: #fff;
   border-radius: 10px;
   padding: 5px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    border-radius: 0;
+  }
 `;
 
 const CloseButton = styled.button`
@@ -350,43 +379,34 @@ const ModalDownload = styled.div`
 
 const ModalDownloadButton = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 `;
 
 const DownloadButtonOrange = styled.button`
   background-color: #f7b740;
-
   color: #fff;
   font-size: 16px;
   padding: 10px 20px;
-  border-radius: 12px;
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  gap: 20px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #45a049;
-  }
+  margin-right: 10px;
 `;
 
 const DownloadButton = styled.button`
-  background-color: #4caf50;
+  background-color: #2c83fb;
   color: #fff;
   font-size: 16px;
   padding: 10px 20px;
-  border-radius: 12px;
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  gap: 20px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
 
-  &:hover {
-    background-color: #45a049;
+  svg {
+    margin-right: 5px;
   }
 `;
