@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import Logo from "../../public/images/logo.png";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faExternalLinkSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
@@ -36,13 +36,13 @@ const Footer = () => {
           <ColumnTitle>Siga a Leadster</ColumnTitle>
           <SocialIcons>
             <IconWrapper>
-              <FontAwesomeIcon icon={faDownload} />
+            <FontAwesomeIcon icon={faExternalLinkSquare} />
             </IconWrapper>
             <IconWrapper>
-              <FontAwesomeIcon icon={faDownload} />
+            <FontAwesomeIcon icon={faExternalLinkSquare} />
             </IconWrapper>
             <IconWrapper>
-              <FontAwesomeIcon icon={faDownload} />
+            <FontAwesomeIcon icon={faExternalLinkSquare} />
             </IconWrapper>
           </SocialIcons>
           <ContactInfo>Email: exemplo@leadster.com</ContactInfo>
@@ -60,16 +60,26 @@ const FooterContainer = styled.footer`
   justify-content: center;
   /* background-color: #f8f8f8; */
   padding: 30px;
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 const LogoImage = styled(Image)`
   width: 120px;
   height: 40px;
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 30px;
+  }
 `;
 
 const Text = styled.p`
   margin-top: 10px;
   font-size: 12px;
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
 `;
 
 const ColumnsContainer = styled.div`
@@ -77,12 +87,20 @@ const ColumnsContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Column = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-basis: 50%;
+  }
 `;
 
 const ColumnTitle = styled.h4`
@@ -114,8 +132,8 @@ const ContactInfo = styled.p`
 `;
 
 const IconWrapper = styled.div`
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;

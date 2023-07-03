@@ -42,13 +42,25 @@ export default ButtonOutlined;
 
 const OutlinedContainer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 5px;
+  font-size: 12px;
   font-family: "Plus-Regular", sans-serif;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
 `;
 
 interface ButtonProps {
@@ -63,6 +75,7 @@ const Button = styled.button<ButtonProps>`
   border-radius: 20px;
   cursor: pointer;
   font-family: "Plus-Regular", sans-serif;
+  font-size: 12px;
 `;
 
 const OrderText = styled.span`
@@ -75,6 +88,11 @@ const Select = styled.select`
   width: 150px;
   height: 35px;
   font-family: "Plus-Regular", sans-serif;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+    margin-left: 8px;
+  }
 `;
 
 const Separator = styled.div`

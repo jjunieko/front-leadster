@@ -203,7 +203,7 @@ const Card = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: calc(50% - 20px);
+    width: calc(100% - 20px);
   }
 
   @media (max-width: 480px) {

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-// import { CustomContainer } from "./index.css";
 import styled from "styled-components";
 import ComparativoImage from "../../public/images/comparativo_img_CTA.png";
 import Selo from "../../public/images/selo_RD.png";
@@ -11,10 +10,12 @@ const InfosContainer = () => {
   return (
     <Container>
       <LeftSection>
-        <Image src={ComparativoImage} width={320} height={300} alt="Imagem" />
+        <ImageWrapper>
+          <Image src={ComparativoImage} width={350} height={300}  objectFit="cover" alt="Imagem" />
+        </ImageWrapper>
       </LeftSection>
       <RightSection>
-        <Title>Pronto para triplicar sua <br/> <SpanText> Geração de Leads?</SpanText> </Title>
+        <Title>Pronto para triplicar sua <br/> <SpanText>Geração de Leads?</SpanText></Title>
         <Subtitle>Criação e ativação em 4 minutos.</Subtitle>
         <Separator />
         <ButtonContainer>
@@ -23,9 +24,9 @@ const InfosContainer = () => {
         </ButtonContainer>
         <InformesContainer>
           <Image src={Nocard} width={20} height={20} alt="Imagem" />
-          <BottomText>Não é necessário Cartão de Credito</BottomText>
+          <BottomText>Não é necessário Cartão de Crédito</BottomText>
           <SeparatorVertical />
-          <Image src={Rating} width={80} height={14} alt="Imagem" />
+          <Image src={Rating} width={100} height={15} alt="Imagem" />
           <BottomText>4.9/5 média de satisfação</BottomText>
         </InformesContainer>
       </RightSection>
@@ -33,42 +34,71 @@ const InfosContainer = () => {
   );
 };
 
-const Section = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 const Container = styled.div`
   background-color: #dbeafe;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  height: 400px;
-  width: 100%;
   padding: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    height: 400px;
+  }
 `;
 
 const LeftSection = styled.div`
   display: flex;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
 `;
 
 const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 10px;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    align-items: flex-start;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  /* height: 200px; */
+
+  /* @media (min-width: 768px) {
+    width: 320px;
+    height: 300px;
+  } */
 `;
 
 const Title = styled.h1`
   font-size: 24px;
   font-family: 'Plus-Regular';
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;
 
 const Subtitle = styled.p`
   font-size: 14px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;
 
 const SpanText = styled.span`
@@ -80,19 +110,23 @@ const Separator = styled.div`
   height: 1px;
   background-color: #ccc;
   margin: 20px 0;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-`;
+  margin-bottom: 10px;
 
-const InformesContainer = styled.div`
-  display: flex;
-  align-items: center;
-  align-self: center;
-  margin-top: 10px
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+  }
 `;
 
 const Button = styled.button`
@@ -104,13 +138,28 @@ const Button = styled.button`
   border-radius: 50px;
   border: none;
   cursor: pointer;
-  margin-right: 10px;
+  margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
 `;
 
 const ImageSmall = styled.img`
   width: 20px;
   height: 20px;
   margin-right: 5px;
+`;
+
+const InformesContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    align-self: flex-start;
+  }
 `;
 
 const BottomText = styled.p`
