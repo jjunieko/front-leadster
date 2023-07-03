@@ -48,6 +48,7 @@ const OutlinedContainer = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   gap: 10px;
+  font-family: "Plus-Regular", sans-serif;
 `;
 
 interface ButtonProps {
@@ -61,6 +62,7 @@ const Button = styled.button<ButtonProps>`
   background-color: transparent;
   border-radius: 20px;
   cursor: pointer;
+  font-family: "Plus-Regular", sans-serif;
 `;
 
 const OrderText = styled.span`
@@ -71,7 +73,8 @@ const Select = styled.select`
   margin-left: 8px;
   border-radius: 12px;
   width: 150px;
-  height: 35px
+  height: 35px;
+  font-family: "Plus-Regular", sans-serif;
 `;
 
 const Separator = styled.div`

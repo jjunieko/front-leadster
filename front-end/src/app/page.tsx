@@ -4,7 +4,7 @@ import NavContainer from "@/Layout/NavContainer";
 import SubContainer from "@/Layout/SubContainer";
 import VideosContainer from "@/Layout/Videos";
 import InfosContainer from "@/Layout/InfosContainer";
-import FooterContainer from "@/Layout/Footer";
+import Footer from "@/Layout/Footer";
 
 import '@/app/page.module.css';
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -18,7 +18,7 @@ export default function App() {
     <SubContainer />
     <VideosContainer />
     <InfosContainer />
-    <FooterContainer />
+    <Footer />
     </>
   );
 }

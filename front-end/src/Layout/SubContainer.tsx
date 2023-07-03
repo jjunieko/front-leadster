@@ -18,7 +18,7 @@ const SubContainer = () => {
           </MoreText>
         </TextWrapper>
         <Line />
-        <p>Conheça as estratégias que mudaram o jogo e como aplicá-las no seu negócio</p>
+        <p>Conheça as estratégias que <TextSpan>mudaram o jogo</TextSpan> e como aplicá-las no seu negócio</p>
       </ContentWrapper>
     </Section>
   );
@@ -30,7 +30,7 @@ const Section = styled.section`
   background-color: #dbeafe;
   padding: 40px;
   width: 100%;
-  height: 400px;
+  height: 350px;
 `;
 
 const ContentWrapper = styled.div`
@@ -54,7 +54,7 @@ const Button = styled.button`
 const LessText = styled.p`
   font-size: 32px;
   font-weight: 500;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Plus-Regular", sans-serif;
   margin-bottom: 10px;
 
   @media (max-width: 768px) {
@@ -67,7 +67,7 @@ const MoreText = styled.p`
   margin-bottom: 20px;
   color: #2c83fb;
   font-weight: bold;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Plus-Regular", sans-serif;
   /* white-space: nowrap; */
 
   @media (max-width: 530px) {
@@ -96,6 +96,10 @@ const ImageWrapper = styled.span`
   }
 `;
 
+const TextSpan = styled.span`
+  font-family: 'plus-bold';
+`;
+
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -106,3 +110,5 @@ const TextWrapper = styled.div`
     align-items: center;
   }
 `;
+
+

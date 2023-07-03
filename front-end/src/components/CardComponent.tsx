@@ -145,15 +145,15 @@ const CardComponent: React.FC = () => {
             <ModalDownloadButton>
               <DownloadButton>
                 <FontAwesomeIcon icon={faDownload} />
-                <span>SpreedSheet.txt</span>
+                <span> SpreedSheet.txt</span>
               </DownloadButton>
               <DownloadButton>
                 <FontAwesomeIcon icon={faDownload} />
-                <span>SpreedSheet.txt</span>
+                <span> SpreedSheet.txt</span>
               </DownloadButton>
               <DownloadButtonOrange>
                 <FontAwesomeIcon icon={faDownload} />
-                <span>SpreedSheet.txt</span>
+                <span> SpreedSheet.txt</span>
               </DownloadButtonOrange>
             </ModalDownloadButton>
           </ModalContent>
@@ -285,6 +285,7 @@ const SeparatorModal = styled.div`
   height: 1px;
   background-color: #ccc;
   margin: 5px 0;
+  font-family: "Plus-Regular", sans-serif;
 
   @media (max-width: 768px) {
     margin: 10px 0;
@@ -340,6 +341,7 @@ const ModalTitle = styled.span`
   font-weight: bold;
   color: #2c83fb;
   margin-right: 10px;
+  font-family: "Plus-Regular", sans-serif;
 `;
 
 const ModalText = styled.p`
@@ -366,10 +368,12 @@ const ModalVideo = styled.div`
 
 const ModalDescriptionTextTitle = styled.h4`
   margin-bottom: 20px;
+  font-family: "Plus-bold", sans-serif;
 `;
 
 const ModalDescription = styled.div`
   margin-bottom: 20px;
+  font-family: "Plus-Regular", sans-serif;
 `;
 
 const ModalDownload = styled.div`
@@ -381,32 +385,35 @@ const ModalDownloadButton = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  
 `;
 
 const DownloadButtonOrange = styled.button`
   background-color: #f7b740;
   color: #fff;
   font-size: 16px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   margin-right: 10px;
+  font-family: "Plus-Regular", sans-serif;
 `;
 
 const DownloadButton = styled.button`
   background-color: #2c83fb;
   color: #fff;
   font-size: 16px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   margin-right: 10px;
   display: flex;
   align-items: center;
+  font-family: "Plus-Regular", sans-serif;
 
   svg {
-    margin-right: 5px;
+    margin-right: 10px;
   }
 `;
