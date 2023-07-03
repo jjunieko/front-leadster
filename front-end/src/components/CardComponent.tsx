@@ -4,7 +4,7 @@ import TumbImage from "../../public/images/thumbnail.png";
 import imageUrl from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import cardData from '../api/cardData';
+import cardData from "../database/cardData.json";
 
 interface CardData {
   id: number;
