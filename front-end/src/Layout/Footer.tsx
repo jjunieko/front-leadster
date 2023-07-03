@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import Logo from "../../public/images/logo.png";
-import { faExternalLinkSquare } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Facebook  from "../../public/images/facebook.jpg";
+import Instagram from "../../public/images/instagram.jpg";
+import Linkedin from "../../public/images/linkedin.jpg";
 
 const Footer = () => {
   return (
@@ -36,13 +37,13 @@ const Footer = () => {
           <ColumnTitle>Siga a Leadster</ColumnTitle>
           <SocialIcons>
             <IconWrapper>
-            <FontAwesomeIcon icon={faExternalLinkSquare} />
+              <Image src={Facebook} widht={20} height={20}/>
             </IconWrapper>
             <IconWrapper>
-            <FontAwesomeIcon icon={faExternalLinkSquare} />
+            <Image src={Instagram} widht={20} height={20}/>
             </IconWrapper>
             <IconWrapper>
-            <FontAwesomeIcon icon={faExternalLinkSquare} />
+            <Image src={Linkedin} widht={20} height={20}/>
             </IconWrapper>
           </SocialIcons>
           <ContactInfo>Email: exemplo@leadster.com</ContactInfo>
@@ -58,8 +59,9 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: #f8f8f8; */
-  padding: 30px;
+  padding: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
   @media (max-width: 768px) {
     padding: 20px;
   }
@@ -113,6 +115,7 @@ const Cell = styled.p`
   font-size: 14px;
   margin: 5px 0;
   font-family: 'Plus-Regular';
+  color: "gray";
 `;
 
 const SocialIcons = styled.div`
@@ -137,7 +140,6 @@ const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ccc;
   border-radius: 50%;
   margin-right: 5px;
 `;

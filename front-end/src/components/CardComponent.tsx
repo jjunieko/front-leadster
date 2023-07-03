@@ -4,6 +4,7 @@ import TumbImage from "../../public/images/thumbnail.png";
 import imageUrl from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import cardData from '../api/cardData';
 
 interface CardData {
   id: number;
@@ -19,70 +20,8 @@ const CardComponent: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response: CardData[] = [
-        {
-          id: 1,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-        {
-          id: 2,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-        {
-          id: 3,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-        {
-          id: 4,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-        {
-          id: 5,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-        {
-          id: 6,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-        {
-          id: 7,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-        {
-          id: 8,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-        {
-          id: 9,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-        {
-          id: 10,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-        {
-          id: 11,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-        {
-          id: 12,
-          imageUrl: "/images/thumbnail.png",
-          text: "Como aumentar sua Geração de Leads feat. Traktor",
-        },
-      ];
 
-      setData(response);
+      setData(cardData);
     };
 
     fetchData();
@@ -127,7 +66,7 @@ const CardComponent: React.FC = () => {
             <ModalVideo>
               {/* Inserir o vídeo do YouTube aqui */}
               {/* Exemplo: */}
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube Video" />
+              <iframe width="460" height="250" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube Video" />
             </ModalVideo>
             <ModalDescription>
               <ModalDescriptionTextTitle>Descrição</ModalDescriptionTextTitle>
@@ -353,10 +292,10 @@ const ModalText = styled.p`
 
 const ModalVideo = styled.div`
   width: 100%;
-  height: 0;
+  /* height: 0; */
   padding-bottom: 56.25%;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   iframe {
     position: absolute;
@@ -368,7 +307,7 @@ const ModalVideo = styled.div`
 `;
 
 const ModalDescriptionTextTitle = styled.h4`
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-family: "Plus-bold", sans-serif;
 `;
 

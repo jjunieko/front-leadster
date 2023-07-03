@@ -51,7 +51,7 @@ const Container = styled.div`
 const LeftSection = styled.div`
   display: flex;
   align-items: center;
-  margin: 0 auto;
+  
   margin-bottom: 20px;
 
   @media (min-width: 768px) {
@@ -74,12 +74,7 @@ const RightSection = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  /* height: 200px; */
-
-  /* @media (min-width: 768px) {
-    width: 320px;
-    height: 300px;
-  } */
+  margin-right: 40px;
 `;
 
 const Title = styled.h1`
@@ -110,10 +105,6 @@ const Separator = styled.div`
   height: 1px;
   background-color: #ccc;
   margin: 20px 0;
-
-  /* @media (min-width: 768px) {
-    display: none;
-  } */
 `;
 
 const ButtonContainer = styled.div`
