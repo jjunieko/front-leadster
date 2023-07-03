@@ -37,13 +37,13 @@ const Footer = () => {
           <ColumnTitle>Siga a Leadster</ColumnTitle>
           <SocialIcons>
             <IconWrapper>
-              <Image src={Facebook} widht={20} height={20}/>
+              <Image src={Facebook} width={20} height={20}/>
             </IconWrapper>
             <IconWrapper>
-            <Image src={Instagram} widht={20} height={20}/>
+            <Image src={Instagram} width={20} height={20}/>
             </IconWrapper>
             <IconWrapper>
-            <Image src={Linkedin} widht={20} height={20}/>
+            <Image src={Linkedin} width={20} height={20}/>
             </IconWrapper>
           </SocialIcons>
           <ContactInfo>Email: exemplo@leadster.com</ContactInfo>
