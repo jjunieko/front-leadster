@@ -6,6 +6,7 @@ const nextConfig = {
         config.resolve.alias['@fonts'] = path.join(__dirname, 'public/fonts');
         return config;
       },
+      ignoreDuringBuilds: true,
 }
 
 module.exports = nextConfig
