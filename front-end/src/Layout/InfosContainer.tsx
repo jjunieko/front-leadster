@@ -20,7 +20,7 @@ const InfosContainer = () => {
         <Separator />
         <ButtonContainer>
           <Button>VER DEMONSTRAÇÃO</Button>
-          <Image src={Selo} width={130} height={40} alt="Imagem" />
+          <Image src={Selo} width={115} height={40} alt="Imagem" />
         </ButtonContainer>
         <InformesContainer>
           <Image src={Nocard} width={20} height={20} alt="Imagem" />
@@ -106,14 +106,14 @@ const SpanText = styled.span`
 `;
 
 const Separator = styled.div`
-  width: 100%;
+  width: 70%;
   height: 1px;
   background-color: #ccc;
   margin: 20px 0;
 
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     display: none;
-  }
+  } */
 `;
 
 const ButtonContainer = styled.div`

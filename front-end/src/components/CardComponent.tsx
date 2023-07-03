@@ -224,7 +224,7 @@ const Image = styled.img`
 `;
 
 const Text = styled.p`
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 10px;
   margin: 10px;
   font-family: "plus-bold";
@@ -293,6 +293,7 @@ const SeparatorModal = styled.div`
 `;
 
 const ModalContainer = styled.div`
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
