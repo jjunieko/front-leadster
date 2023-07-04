@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 interface OutlinedProps {
   selectedOption: string;
-  onSelectOption: (option: string) => void;
+  onSelectOption: (option: string) => any;
 }
 
 const ButtonOutlined: React.FC<OutlinedProps> = ({ selectedOption, onSelectOption }) => {

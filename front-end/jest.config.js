@@ -1,12 +1,9 @@
-// jest.config.js
-module.exports = async () => {
-  return {
-    verbose: true,
-    transform: {
-      "^.+\\.jsx?$": "babel-jest"
-    },
-    setupFilesAfterEnv: ['@testing-library/react'],
-    preset: 'ts-jest',
-    testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
-  }
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'jest-environment-jsdom',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
 };
