@@ -16,7 +16,7 @@ const Footer = () => {
           <ColumnTitle>Links Principais</ColumnTitle>
           <Cell>Home</Cell>
           <Cell>Ferramenta</Cell>
-          <Cell>LPreços</Cell>
+          <Cell>Preços</Cell>
           <Cell>Contato </Cell>
         </Column>
         <Column>
@@ -68,8 +68,8 @@ const FooterContainer = styled.footer`
 `;
 
 const LogoImage = styled(Image)`
-  width: 120px;
-  height: 40px;
+  width: 110px;
+  height: 30px;
   @media (max-width: 768px) {
     width: 80px;
     height: 30px;

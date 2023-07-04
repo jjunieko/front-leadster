@@ -11,7 +11,7 @@ const InfosContainer = () => {
     <Container>
       <LeftSection>
         <ImageWrapper>
-          <Image src={ComparativoImage} width={350} height={300}  objectFit="cover" alt="Imagem" />
+          <Image src={ComparativoImage} width={400} height={320}  alt="Imagem" />
         </ImageWrapper>
       </LeftSection>
       <RightSection>

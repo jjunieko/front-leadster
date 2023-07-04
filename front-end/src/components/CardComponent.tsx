@@ -20,7 +20,6 @@ const CardComponent: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-
       setData(cardData);
     };
 
@@ -129,7 +128,7 @@ const CardContainer = styled.div`
 `;
 
 const Card = styled.div`
-  width: calc(33.33% - 20px);
+  width: calc(33.33% - 100px);
   margin: 10px;
   background-color: #fff;
   border-radius: 10px;
@@ -166,7 +165,13 @@ const Text = styled.p`
   font-size: 14px;
   margin-top: 10px;
   margin: 10px;
+  word-wrap: break-word;
   font-family: "plus-bold";
+  cursor: pointer;
+
+  &:hover {
+    color: blue;
+  }
 `;
 
 const TextPagination = styled.p`
@@ -325,7 +330,6 @@ const ModalDownloadButton = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  
 `;
 
 const DownloadButtonOrange = styled.button`
